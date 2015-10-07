@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_share" android:title="Compartilhar via"
+        android:orderInCategory="1" app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_share_white" />
+
+    <item android:id="@+id/action_new_feedback" android:title="Novo feedback"
+        android:orderInCategory="2" app:showAsAction="never" />
+
+    <item android:id="@+id/action_about_us" android:title="Sobre"
+        android:orderInCategory="3" app:showAsAction="never" />
+
+    <item android:id="@+id/action_review_app" android:title="Avalie o app"
+        android:orderInCategory="4" app:showAsAction="never" />
+
+</menu>

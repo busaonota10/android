@@ -1,0 +1,135 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:soulwolf="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:padding="25dp"
+                android:background="@color/purple_principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/edit_text_number_line"
+                    android:inputType="textCapCharacters"
+                    app:met_baseColor="#fff"
+                    app:met_primaryColor="#64ffda"
+                    app:met_floatingLabel="highlight"
+                    android:textColorHint="#fff"
+                    android:hint="Número do veículo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".65"
+                    android:id="@+id/edit_text_number_car" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/edit_text_message"
+                    android:inputType="textCapCharacters"
+                    app:met_baseColor="#fff"
+                    app:met_primaryColor="#64ffda"
+                    app:met_floatingLabel="highlight"
+                    android:textColorHint="#fff"
+                    android:hint="Linha"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".35"
+                    android:id="@+id/edit_text_number_line" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:padding="25dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/purple_principal"
+                android:text="Como foi sua experiência?"
+                android:id="@+id/text_view_how_your_experience"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <net.soulwolf.widget.materialradio.MaterialRadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <net.soulwolf.widget.materialradio.MaterialRadioButton
+                    android:id="@+id/radio_button_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    soulwolf:mcPadding="5dp"
+                    android:layout_margin="5dp"
+                    soulwolf:mcChecked="true"
+                    soulwolf:mcAnimator="true"
+                    soulwolf:mcTextColor="@drawable/radio_button_text_selector"
+                    soulwolf:mcButton="@drawable/radio_button_boy_selector" />
+
+                <net.soulwolf.widget.materialradio.MaterialRadioButton
+                    android:id="@+id/radio_button_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    soulwolf:mcAnimator="true"
+                    soulwolf:mcPadding="5dp"
+                    android:layout_margin="5dp"
+                    soulwolf:mcTextColor="@drawable/radio_button_text_selector"
+                    soulwolf:mcButton="@drawable/radio_button_girl_selector" />
+
+            </net.soulwolf.widget.materialradio.MaterialRadioGroup>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_below="@+id/radioGroup"
+                app:met_baseColor="#000"
+                app:met_primaryColor="#64ffda"
+                app:met_floatingLabel="highlight"
+                android:textColorHint="#000"
+                android:hint="Mensagem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/edit_text_message"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+                <com.dd.CircularProgrepdatessButton
+                    app:cpb_selectorIdle="@drawable/circula_button_idle_state_selector"
+                    app:cpb_colorIndicator="@color/purple_principal"
+                    android:layout_marginTop="25dp"
+                    app:cpb_cornerRadius="5dp"
+                    android:id="@+id/send_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    app:cpb_textComplete="Enviado"
+                    app:cpb_textError="Erro"
+                    app:cpb_textIdle="ENVIAR"
+                    android:layout_below="@+id/edit_text_message"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

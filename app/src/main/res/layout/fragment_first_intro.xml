@@ -1,0 +1,69 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2685d8"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".acitivty.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:id="@+id/relativeLayout4">
+
+        <TextView
+            android:id="@+id/first_edit_text"
+            android:text="Bem vindo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#fff" />
+
+        <TextView
+            android:text="Busão Nota 10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/first_edit_text"
+            android:layout_marginTop="5dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_view_intro_1"
+        android:src="@drawable/intro_img_1"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_below="@+id/image_view_intro_1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:gravity="center"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Como você avalia o sistema de ônibus da sua cidade? Que tal contar suas experiências para ajudar a melhorar esse serviço?"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textSize="16dp" />
+    </RelativeLayout>
+</RelativeLayout>
