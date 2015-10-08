@@ -6,9 +6,10 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.widget.EditText;
 
-import com.dd.CircularProgressButton;
+import at.markushi.ui.CircleButton;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -71,11 +72,12 @@ public class FeedbackActivity extends AppCompatActivity implements
     }
 
     @OnClick(R.id.send_button)
-    public void submitFeedback(CircularProgressButton circularProgressButton) {
-        circularProgressButton.setIndeterminateProgressMode(true);
-        circularProgressButton.setProgress(50);
+    public void submitFeedback(CircleButton circularProgressButton) {
+//        circularProgressButton.setIndeterminateProgressMode(true);
+//        circularProgressButton.setProgress(50);
 
         JSONObject form = null;
+        Log.e("button", "clicked"); // just to check if the button was clicked
 
         try {
             form = buildFormAsJSON();
